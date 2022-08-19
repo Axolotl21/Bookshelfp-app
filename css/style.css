@@ -1,0 +1,288 @@
+@font-face {
+    font-family: myBookFont;
+    src: url(/material/IndieFlower-Regular.ttf);
+    font-weight: bold;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body {
+    background-color: #FFFADA;
+}
+
+header{ height: 80px;}
+
+h1 {
+    background-color: #DAAA63;
+    color: #2C1810;
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    border-radius: 15px;
+    font-family: myBookFont;
+}
+
+.cover {
+    height: 410px;
+    width: 60%;
+    background-color: #cab891;
+    border-radius: 5px;
+    box-shadow: grey 5px 10px 15px 0px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.page {
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#input-search {
+    margin-top: 10px;
+}
+
+#form-search {
+    margin-top: 50px;
+}
+
+#input-search, #input-data{
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+    font-family: myBookFont;
+}
+
+#input-data{
+    border-left: 1.5px dashed rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.025);
+}
+
+#search-box {
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 70%;
+    height: 40px;
+}
+
+#search-box>input{
+    border: none;
+    padding: 6px;
+    width: 75%;
+    border-radius: inherit;
+    background-color: none;
+    font-family: myBookFont;
+}
+
+#search-box>input::placeholder{
+    text-align: center;
+}
+
+#search-box> input:focus {
+    outline: none;
+    border: none;
+}
+
+#search-box>button[type="button"] {
+    background: url(/material/search_FILL0_wght400_GRAD0_opsz48.svg);
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    top: 6px;
+}
+
+#input-data>form[class="center"]{
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#input-data> form>label {
+    margin-left: 17px;
+    font-weight: bolder;
+}
+
+#input-data> form input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 10px;
+    width: 100%;
+    font-family: myBookFont;
+}
+
+#input-data>form>p{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    margin: 10px;
+}
+
+input[type="submit"] {
+    background-color: #DAAA63;
+    border: none;
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+    color: #2C1810;
+    font-family: myBookFont;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #2C1810;
+    color: #DAAA63;
+}
+
+.book-rack {
+    width: 78%;
+    background-color: white;
+    height: auto;
+    margin: 40px 0px;
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: grey 5px 10px 20px 10px;
+    position: relative;
+    font-family: myBookFont;
+}
+
+.book-rack> .book-rack-holder {
+    width: 110%;
+    height: 20px;
+    background-color: white;
+    position: absolute;
+    top: -20px;
+    left: -45px;
+    box-shadow: 10px 15px 20px 0px rgb(0 0 0 / 65%);
+    border-radius: 15px;
+}
+
+.container-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.book-rack h2 {
+    writing-mode:vertical-lr;
+    text-orientation: upright;
+    text-align: center;
+    height: 100%;
+    width: auto;
+    padding: 20px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#current-read, #have-read {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+.book {
+    background-color: #cab891;
+    border-radius: 0px 8px 8px 0px;
+    box-shadow: grey 5px 10px 15px 0px;
+    max-width: 200px;
+    height: 240px;
+    margin: 40px;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    transition: transform .3s linear;
+    position: relative;
+}
+
+.book:hover {
+    transform: rotate(-5deg);
+}   
+
+.book h3 {
+    background-color: #FFF9CA;
+    padding: 20px 3px;
+    border-radius: 5px;
+}
+
+.button-action {
+    border: 0.5px solid #2C1810;
+    border-radius: 50%;
+    background-color: #2C1810;
+    width: 35px;
+    height: 35px;
+    position: relative;
+    text-align: center; 
+    padding-top: 4px;
+    color: #cab891;
+    cursor: pointer;
+}
+
+.button-action:hover {
+    background-color: #cab891;
+    color: #2C1810;
+}
+
+.action-delete {
+    position: absolute;
+    right: -10%;
+    bottom: 30%;
+}
+
+.action-move {
+    position: absolute;
+    right: -10%;
+    bottom: 10%;
+}
+
+.custom-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    
+}
+
+.custom-dialog>span {
+    margin: 15px 0px;
+}
+
+.custom-dialog>b{
+    color: #2C1810;
+}
+
+#dialog-box {
+    width: 35vw;
+    height: 150px;
+    background-color: #cab891;
+    border-radius: 10px;
+    position: fixed;
+    z-index: 2;
+    top: 20%;
+    left: 33%;
+    font-family: myBookFont;
+    display: none;
+}
